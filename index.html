@@ -11,7 +11,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to bottom, #c5ddff, #fba708);
+            /* background: linear-gradient(to bottom, rgba(197, 221, 255, 0.8), rgba(251, 167, 8, 0.8)), 
+                        url('./ship-8243960_1920.jpg') no-repeat center center fixed; */
+            background: url('./ship-8243960_1920.jpg') no-repeat center center fixed;
+            background-size: cover;
             font-family: 'Arial', sans-serif;
         }
 
@@ -27,7 +30,7 @@
 
         .container {
             width: 70%;
-            height: 85%;
+            height: 90%;
             max-width: 600px; /* Ensure it doesn't get too wide */
             max-height: 600px; /* Ensure it doesn't get too tall */
             background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
@@ -44,7 +47,7 @@
         }
 
         .container img {
-            width: 70%  ;
+            width: 70%;
             height: auto;
             margin-bottom: 20px;
         }
@@ -72,6 +75,7 @@
             justify-content: center;
             gap: 10px; /* Space between logo and text */
             margin-top: 20px;
+            cursor: pointer;
         }
 
         .whatsapp-logo {
@@ -122,18 +126,13 @@
                 width: 25px;
                 height: 25px;
             }
-
-            .para{
-                cursor: pointer;
-            }
-
         }
     </style>
     <script>
-        const url = 'https://wa.me/9650956368'
-        function whatsapp(){
+        const url = 'https://wa.me/9650956368';
+        function whatsapp() {
             console.log("clicked");
-            window.open(url,'_blank');
+            window.open(url, '_blank');
         }
     </script>
 </head>
@@ -144,8 +143,9 @@
     <div class="container">
         <img src="./logo_image-removebg.png" alt="Jabal Cargo Logo"/>
         <h1>Jabal Cargo</h1>
-        <h3>Exciting things are coming soon! Stay tuned</h3>
-        <p onclick="whatsapp()" target="_black" style="cursor: pointer;" ><span class="whatsapp-logo"></span>Hit the link to start the conversation. We can't wait to connect!</p>
+        <h3>Delivering with precision and care</h3>
+        <h3>coming soon..</h3>
+        <p onclick="whatsapp()"><span class="whatsapp-logo"></span>Hit the link to start the conversation. We can't wait to connect!</p>
     </div>
 
 </body>
