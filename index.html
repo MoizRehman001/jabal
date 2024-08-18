@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Card</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #c5ddff, #fba708);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .whatsapp-logo-top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: url('./logo.png') no-repeat center;
+            background-size: cover;
+        }
+
+        .container {
+            width: 70%;
+            height: 85%;
+            max-width: 600px; /* Ensure it doesn't get too wide */
+            max-height: 600px; /* Ensure it doesn't get too tall */
+            background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Prevent overflow of child elements */
+        }
+
+        .container img {
+            width: 70%  ;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .container h1 {
+            font-size: 1.8rem;
+            color: black;
+            font-family: 'Verdana', sans-serif;
+            margin: 10px 0;
+        }
+
+        .container h3 {
+            font-size: 1rem;
+            color: black;
+            font-family: 'Verdana', sans-serif;
+            margin: 10px 0;
+        }
+
+        .container p {
+            font-size: 1rem;
+            color: red;
+            font-family: 'Verdana', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Space between logo and text */
+            margin-top: 20px;
+        }
+
+        .whatsapp-logo {
+            width: 40px; /* Adjusted size for better alignment */
+            height: 40px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center;
+            background-size: contain;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: 80%;
+                height: 80%;
+            }
+
+            .container h1 {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-logo {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                height: 80%;
+                padding: 15px;
+            }
+
+            .container h1 {
+                font-size: 1.4rem;
+            }
+
+            .whatsapp-logo {
+                width: 25px;
+                height: 25px;
+            }
+
+            .para{
+                cursor: pointer;
+            }
+
+        }
+    </style>
+    <script>
+        const url = 'https://wa.me/9650956368'
+        function whatsapp(){
+            console.log("clicked");
+            window.open(url,'_blank');
+        }
+    </script>
+</head>
+<body>
+
+    <div class="whatsapp-logo-top-left"></div>
+
+    <div class="container">
+        <img src="./logo_image-removebg.png" alt="Jabal Cargo Logo"/>
+        <h1>Jabal Cargo</h1>
+        <h3>Exciting things are coming soon! Stay tuned</h3>
+        <p onclick="whatsapp()" target="_black" style="cursor: pointer;" ><span class="whatsapp-logo"></span>Hit the link to start the conversation. We can't wait to connect!</p>
+    </div>
+
+</body>
+</html>
